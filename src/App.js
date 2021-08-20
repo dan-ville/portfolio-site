@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+
+import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { themes } from "./theme/theme";
+import Header from "./components/Header/Header";
+import { Wrapper } from "./components/Layout/Layout";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  const [theme, setTheme] = useState(themes[0])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+          </Switch>
+        </Router>
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 
