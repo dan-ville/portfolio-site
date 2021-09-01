@@ -13,7 +13,6 @@ const Home = () => {
     <Section>
       <PageWidth>
         <StyledTitle>Greetings!</StyledTitle>
-
           <StyledIntro>
             <StyledPitch>
               My name is Daniel. I love designing platforms and services that
@@ -24,7 +23,6 @@ const Home = () => {
               This is Mack. He adds no SEO value but he's funny to look at.
             </MackIntro>
           </StyledIntro>
-
       </PageWidth>
     </Section>
   );

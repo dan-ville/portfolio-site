@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { themes } from "../../../theme/theme";
+// import { themes } from "../../../theme/theme";
 
 export const StyledBio = styled.p`
   line-height: 1.5;

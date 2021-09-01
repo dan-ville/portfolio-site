@@ -9,7 +9,8 @@ export const ocean = {
     negative: "hsl(0, 0%, 15%)",
   },
   border: "hsl(0, 0%, 85%)",
-  accent: "hsl(252, 100%, 57%)",
+  accent: "hsl(200, 72%, 38%)",
+  boxShadow: "hsl(200, 20%, 20%)",
 };
 
 // orange

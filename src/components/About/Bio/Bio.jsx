@@ -7,7 +7,7 @@ import {
   StyledFormHint,
   StyledLabel,
 } from "./Bio.styles";
-import { BioOptions } from "./enums";
+import { BioOptions } from "./bioOptions";
 
 const ChooseBioLength = ({ theme, bioOption, setBioOption }) => {
   const handleClick = (e) => {

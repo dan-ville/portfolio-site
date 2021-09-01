@@ -6,10 +6,9 @@ export const HeaderStyled = styled.div`
   color: ${(props) => props.theme.text.main};
   border-bottom: 1px solid ${(props) => props.theme.bg.light};
 `;
-
 export const HeaderWrapperStyled = styled.div`
   margin: 0 auto;
-  
+
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
@@ -29,9 +28,10 @@ export const NavLinkStyled = styled.a`
   padding: 0.3em 0.8em;
   transition: all 0.7s ease;
   text-decoration: none;
+  
   &:hover {
     cursor: pointer;
     color: ${(props) => props.theme.text.main};
-    background-color: ${(props) => props.theme.bg.lift};
+    background-color: ${(props) => props.theme.accent};
   }
 `;

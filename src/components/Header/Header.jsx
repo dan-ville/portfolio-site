@@ -16,9 +16,9 @@ const Header = () => {
           <NavLinkStyled as={Link} to="/Work">
             Work
           </NavLinkStyled>
-          <NavLinkStyled as={Link} to="/Blog">
+          {/* <NavLinkStyled as={Link} to="/Blog">
             Blog
-          </NavLinkStyled>
+          </NavLinkStyled> */}
           <NavLinkStyled as={Link} to="/About">
             About
           </NavLinkStyled>

@@ -1,5 +1,6 @@
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import Work from "./components/Work/Work.component";
 
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
@@ -9,7 +10,7 @@ import { Wrapper } from "./components/Layout/Layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const [theme, setTheme] = useState(themes[0])
+  const [theme] = useState(themes[0])
 
   return (
     <ThemeProvider theme={theme}>
@@ -19,6 +20,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/work">
+              <Work />
             </Route>
             <Route exact path="/about">
               <About />
