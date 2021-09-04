@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Name } from "../../assets/Name/Name";
+import ThemeToggle from "../../assets/UI/ThemeToggle/ThemeToggle";
 import {
   HeaderStyled,
   HeaderWrapperStyled,
@@ -22,6 +23,7 @@ const Header = () => {
           <NavLinkStyled as={Link} to="/About">
             About
           </NavLinkStyled>
+          <ThemeToggle />
         </NavStyled>
       </HeaderWrapperStyled>
     </HeaderStyled>

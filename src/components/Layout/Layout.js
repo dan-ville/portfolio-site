@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: ${(props) => props.theme.bg.base};
 `;
 export const PageWidth = styled.div`
