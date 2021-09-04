@@ -14,7 +14,6 @@ export const PageContent = styled.div`
 export const Section = styled.section`
   padding: 2.5rem;
   background-color: ${props => props.theme.bg.base};
-  /* border-bottom: 1px solid ${props => props.theme.border}; */
 `;
 export const FlexCol = styled.div`
   display: flex;
@@ -24,6 +23,7 @@ export const FlexCol = styled.div`
 `;
 export const StyledTitle = styled.h1`
   margin: 0 auto;
+  margin-bottom: 1rem  ;
   text-align: center;
   font-size: 3rem;
   color: ${(props) => props.theme.text.main};

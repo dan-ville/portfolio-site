@@ -10,6 +10,7 @@ const Button = styled.button`
   margin: 1rem 0;
 
   color: ${(props) => props.theme.text.main};
+  background-color: ${(props) => props.theme.bg.base};
   border: 1px solid ${(props) => props.theme.border};
   border-radius: 0.2em;
 

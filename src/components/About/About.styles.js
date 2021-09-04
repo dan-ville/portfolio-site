@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const StyledAbout = styled.div`
-  padding: 3rem 1rem;
-`;
-
 export const StyledProfileCard = styled.div`
   margin: auto;
   color: ${(props) => props.theme.text.negative};

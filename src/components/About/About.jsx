@@ -1,9 +1,8 @@
 import { useState, useContext } from "react";
-
+import { StyledTitle, PageContent } from "../Layout/Layout";
 import { ThemeContext } from "styled-components";
 import profilePic from "../../assets/img/profilePic.jpg";
 import {
-  StyledAbout,
   StyledProfileCard,
   StyledCardHeader,
   StyledHeaderIcon,
@@ -20,7 +19,8 @@ import Bio from "./Bio/Bio";
 
 const About = () => {
   return (
-    <StyledAbout>
+    <PageContent>
+      <StyledTitle>About</StyledTitle>
       <StyledProfileCard>
         <StyledCardHeader>
           <StyledHeaderIcon>
@@ -29,7 +29,7 @@ const About = () => {
         </StyledCardHeader>
         <TabPane />
       </StyledProfileCard>
-    </StyledAbout>
+    </PageContent>
   );
 };
 

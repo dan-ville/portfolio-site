@@ -13,9 +13,9 @@ import {
 
 // ! Change Explore to React Router Links
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, callback }) => {
   return (
-    <Card>
+    <Card onClick={callback}>
       <CardText>
         <ProjectTitle>{project.heading}</ProjectTitle>
         <p>{project.description}</p>
@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => {
 
 export const Featured = ({ project }) => {
   return (
-    <FeaturedCard>
+    <FeaturedCard >
       <FeaturedText>
         <ProjectTitle>{project.heading}</ProjectTitle>
         <p>{project.description}</p>
