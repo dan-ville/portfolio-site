@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   min-height: 100vh;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.bg.base};

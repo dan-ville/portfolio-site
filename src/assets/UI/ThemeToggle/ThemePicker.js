@@ -9,7 +9,6 @@ const Wrapper = styled.div`
 
 const ThemePickerIcon = ({  theme, callback }) => {
   const fill = "#D9D9D9";
-  // console.log(theme)
 
   return (
     <Wrapper onClick={callback}>

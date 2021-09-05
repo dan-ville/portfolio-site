@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import styled, { ThemeContext } from "styled-components";
 import { AppContext } from "../../../App";
-import ThemePickerIcon from "../../SVG/ThemePicker";
+import ThemePickerIcon from "./ThemePicker";
 import { themes } from "../../../theme/theme";
 
 const ToggleWrapper = styled.div`

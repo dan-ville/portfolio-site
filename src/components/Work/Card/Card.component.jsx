@@ -7,8 +7,7 @@ import {
   FeaturedCard,
   FeaturedText,
   FeaturedThumbnail,
-  FeaturedExplore,
-  FeaturedSpan,
+
 } from "./Card.styles";
 
 // ! Change Explore to React Router Links
@@ -32,10 +31,7 @@ export const Featured = ({ project }) => {
       <FeaturedText>
         <ProjectTitle>{project.heading}</ProjectTitle>
         <p>{project.description}</p>
-        <FeaturedExplore>
-          <em>Featured Project</em>
-        </FeaturedExplore>
-        <FeaturedSpan>Click to explore</FeaturedSpan>
+
       </FeaturedText>
       <FeaturedThumbnail src={project.src} />
     </FeaturedCard>

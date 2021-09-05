@@ -1,10 +1,16 @@
 import styled from "styled-components";
+// import Button from "../../../assets/UI/Button";
 
 export const Card = styled.div`
   border: 1px solid white;
   margin: 1rem 0;
   color: ${(props) => props.theme.text.main};
+  border-radius: 0.3em;
+  overflow: hidden;
+  background-color: ${props => props.theme.bg.lift};
+
   display: flex;
+
   &:hover {
     cursor: pointer;
     box-shadow: -5px 5px 0px ${(props) => props.theme.accent};
@@ -37,9 +43,12 @@ export const FeaturedCard = styled.div`
   max-width: 1000px;
   margin: 1rem auto;
   color: ${(props) => props.theme.text.main};
+  background-color: ${(props) => props.theme.bg.lift};
+  border: 1px solid ${(props) => props.theme.text.main};
+  border-radius: 0.3em;
+
   display: flex;
   flex-wrap: wrap;
-  border: 10px solid ${(props) => props.theme.accent};
 
   &:hover {
     cursor: pointer;
@@ -64,13 +73,4 @@ export const FeaturedThumbnail = styled.img`
   @media (max-width: 700px) {
     width: 100%;
   }
-`;
-export const FeaturedExplore = styled.span`
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: auto;
-`;
-export const FeaturedSpan = styled.span`
-  font-size: 1rem;
-  margin-top: 1rem;
 `;
