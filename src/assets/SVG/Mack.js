@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-
 const sizes = {
   xs: 50,
   sm: 150,
@@ -22,15 +21,15 @@ const Mack = ({ size }) => {
     >
       <mask id="path-1-inside-1" fill="white">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M478.852 592.833C462.642 570.437 465.332 535.998 486.304 517.983C549.176 463.973 589 383.887 589 294.5C589 131.852 457.148 0 294.5 0C131.852 0 0 131.852 0 294.5C0 390.138 45.5877 475.128 116.218 528.925C138.218 545.682 142.937 579.915 128.077 603.237C107.134 636.107 95 675.137 95 717C95 834.084 189.916 929 307 929C424.084 929 519 834.084 519 717C519 670.627 504.111 627.732 478.852 592.833Z"
         />
       </mask>
       <g filter="url(#filter0_i)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M478.852 592.833C462.642 570.437 465.332 535.998 486.304 517.983C549.176 463.973 589 383.887 589 294.5C589 131.852 457.148 0 294.5 0C131.852 0 0 131.852 0 294.5C0 390.138 45.5877 475.128 116.218 528.925C138.218 545.682 142.937 579.915 128.077 603.237C107.134 636.107 95 675.137 95 717C95 834.084 189.916 929 307 929C424.084 929 519 834.084 519 717C519 670.627 504.111 627.732 478.852 592.833Z"
           fill={theme.accent}
         />
@@ -46,7 +45,7 @@ const Mack = ({ size }) => {
         r="49.9039"
         fill={theme.bg.negative}
         stroke={theme.bg.base}
-        stroke-width="7"
+        strokeWidth="7"
       />
       <circle
         cx="442.369"
@@ -54,7 +53,7 @@ const Mack = ({ size }) => {
         r="49.9039"
         fill={theme.bg.negative}
         stroke={theme.bg.base}
-        stroke-width="7"
+        strokeWidth="7"
       />
       <defs>
         <filter
@@ -64,9 +63,9 @@ const Mack = ({ size }) => {
           width="589"
           height="929"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"

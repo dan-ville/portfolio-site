@@ -43,6 +43,8 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.9",
+    "@types/styled-components": "^5.1.14",
     "babel-plugin-styled-components": "^1.13.2"
   }
 }

@@ -2,24 +2,27 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Work from "./components/Work/Work.component";
 
-import { createContext, useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { themes } from "./theme/theme";
 import Header from "./components/Header/Header";
 import { Wrapper } from "./components/Layout/Layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { createContext,  useState } from "react";
+import { themes } from "./theme/theme";
 
-export const AppContext = createContext();
+export const AppContext = createContext()
 
 function App() {
-  const [theme, setTheme] = useState(themes[0]);
+  const storedTheme = JSON.parse(localStorage.getItem("globalTheme"))
+  const [globalTheme, setGlobalTheme] = useState(storedTheme || themes[0])
+  
   const context = {
-    setTheme,
-  };
+    globalTheme, 
+    setGlobalTheme
+  }
 
   return (
     <AppContext.Provider value={context}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={globalTheme}>
         <Wrapper>
           <Router>
             <Header />
@@ -38,6 +41,7 @@ function App() {
         </Wrapper>
       </ThemeProvider>
     </AppContext.Provider>
+
   );
 }
 

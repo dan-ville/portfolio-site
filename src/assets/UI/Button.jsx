@@ -8,6 +8,7 @@ const Button = styled.button`
 
   padding: 0.5em 1em;
   margin: 1rem 0;
+  transition: all 0.5s ease;
 
   color: ${(props) => props.theme.text.main};
   background-color: ${(props) => props.theme.bg.base};

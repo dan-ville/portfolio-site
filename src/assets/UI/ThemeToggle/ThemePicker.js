@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  padding: 0.3em;
+const Wrapper = styled.button`
+  background-color: transparent;
+  border: none;
+  margin: 0.3em;
   &:hover {
     cursor: pointer;
   }
 `;
 
-const ThemePickerIcon = ({  theme, callback }) => {
+const ThemePickerIcon = ({ theme, callback }) => {
   const fill = "#D9D9D9";
 
   return (
