@@ -8,6 +8,7 @@ import { Wrapper } from "./components/Layout/Layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createContext,  useState } from "react";
 import { themes } from "./theme/theme";
+import Quiz from "./components/Quiz/Quiz";
 
 export const AppContext = createContext()
 
@@ -35,6 +36,9 @@ function App() {
               </Route>
               <Route exact path="/about">
                 <About />
+              </Route>
+              <Route exact path="/quiz">
+                <Quiz />
               </Route>
             </Switch>
           </Router>
