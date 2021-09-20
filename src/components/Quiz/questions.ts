@@ -1,21 +1,21 @@
-type QuestionChoice = {
+export type QuestionChoice = {
   value: number;
   text: string;
 };
 
 export interface QuizFieldInterface {
   question: string;
-  inputType: "radio";
+  number: number;
   name: string;
-  choices: QuestionChoice[];
+  options: QuestionChoice[];
 }
 
 export const movieQuiz: QuizFieldInterface[] = [
   {
     question: "What is the best movie franchise?",
-    inputType: "radio",
+    number: 1,
     name: "franchises",
-    choices: [
+    options: [
       {
         value: 1,
         text: "The Matrix",
@@ -36,9 +36,9 @@ export const movieQuiz: QuizFieldInterface[] = [
   },
   {
     question: "Marvel or DC?",
-    inputType: "radio",
+    number: 2,
     name: "superheroes",
-    choices: [
+    options: [
       {
         value: 1,
         text: "MCU",
@@ -59,9 +59,9 @@ export const movieQuiz: QuizFieldInterface[] = [
   },
   {
     question: "Best male spy?",
-    inputType: "radio",
+    number: 3,
     name: "actors",
-    choices: [
+    options: [
       {
         value: 1,
         text: "Matt Damon as Jason Bourne",
@@ -82,9 +82,9 @@ export const movieQuiz: QuizFieldInterface[] = [
   },
   {
     question: "Who is your favorite heroine?",
-    inputType: "radio",
+    number: 4,
     name: "heroines",
-    choices: [
+    options: [
       {
         value: 1,
         text: "Wonder Woman",
@@ -105,24 +105,24 @@ export const movieQuiz: QuizFieldInterface[] = [
   },
   {
     question: "Which duo would make the funniest comedy?",
-    inputType: "radio",
+    number: 5,
     name: "comedians",
-    choices: [
+    options: [
       {
         value: 1,
         text: "Will Ferrel - Sandra Bullock",
       },
       {
         value: 2,
-        text: "Jim Carrey - Amy Poehler ",
+        text: "Jim Carrey - Amy Poehler",
       },
       {
         value: 3,
-        text: "Kevin Hart -  Melissa McCarthy ",
+        text: "Adam Sandler - Melissa McCarthy",
       },
       {
         value: 4,
-        text: "Adam Sandler - Awkwafina",
+        text: "Kevin Hart - Awkwafina",
       },
     ],
   },
