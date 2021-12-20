@@ -39,38 +39,3 @@ export const Explore = styled.span`
   display: block;
   font-size: 0.8rem;
 `;
-export const FeaturedCard = styled.div`
-  max-width: 1000px;
-  margin: 1rem auto;
-  color: ${(props) => props.theme.text.main};
-  background-color: ${(props) => props.theme.bg.lift};
-  border: 1px solid ${(props) => props.theme.text.main};
-  border-radius: 0.3em;
-
-  display: flex;
-  flex-wrap: wrap;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  @media (max-width: 700px) {
-    flex-direction: column;
-  }
-`;
-export const FeaturedText = styled.div`
-  padding: 1rem;
-  width: 50%;
-  @media (max-width: 700px) {
-    width: 100%;
-  }
-  display: flex;
-  flex-direction: column;
-`;
-export const FeaturedThumbnail = styled.img`
-  width: 50%;
-  object-fit: cover;
-  @media (max-width: 700px) {
-    width: 100%;
-  }
-`;

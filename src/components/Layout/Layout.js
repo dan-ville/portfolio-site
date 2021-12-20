@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const AppWrapper = styled.div`
   min-height: 100vh;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.bg.base};
+  color: ${(props) => props.theme.text.main};
 `;
 export const PageWidth = styled.div`
   max-width: 1000px;
@@ -29,5 +30,4 @@ export const StyledTitle = styled.h1`
   margin-bottom: 1rem  ;
   text-align: center;
   font-size: 3rem;
-  color: ${(props) => props.theme.text.main};
 `;

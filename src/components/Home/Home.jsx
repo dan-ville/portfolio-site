@@ -1,7 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import Mack from "../../assets/SVG/Mack";
-
 import { PageWidth, Section, StyledTitle } from "../Layout/Layout";
-
 import {
   StyledIntro,
   StyledPitch,
@@ -11,6 +10,7 @@ import {
 } from "./Home.styles";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <Section>
       <PageWidth>
@@ -26,7 +26,7 @@ const Home = () => {
           </MackIntro>
         </StyledIntro>
         <CTA>
-          <CTAButton>See my work</CTAButton>
+          <CTAButton onClick={() => navigate("/work")}>See my work</CTAButton>
         </CTA>
       </PageWidth>
     </Section>

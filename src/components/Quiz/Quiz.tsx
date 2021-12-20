@@ -1,118 +1,66 @@
-import React, { useEffect, useState } from "react";
-import Button from "../../assets/UI/Button";
+import React from "react";
 import { StyledTitle } from "../Layout/Layout";
 import { movieQuiz, QuizFieldInterface } from "./questions";
-import {
-  QuizWrapper,
-  FormWrapper,
-  QuizTip,
-  FormGroup,
-  Label,
-  FormControls,
-} from "./Quiz.styles";
+import { QuizWrapper, FormWrapper, QuizTip, FormGroup } from "./Quiz.styles";
+import { Formik, Field, Form } from "formik";
+import Button from "../../assets/UI/Button";
 
 export default function Quiz() {
   // TODO: make wizard component
   return (
     <QuizWrapper>
       <StyledTitle>Movie Quiz</StyledTitle>
-      <Form quiz={movieQuiz} />
+      <QuizForm quiz={movieQuiz} />
       <QuizTip>
         Tip: use {"<--/-->"} keys to navigate, and <code>Enter</code> to submit.
       </QuizTip>
     </QuizWrapper>
   );
 }
+
 type FormProps = {
   quiz: QuizFieldInterface[];
 };
-
-const Form: React.FC<FormProps> = ({ quiz }) => {
-  const [index, setIndex] = useState<number>(0);
-  const [answers, setAnswers] = useState({});
-  console.log(answers)
-
-  const startOfQuiz = index <= 0;
-  const endOfQuiz = index === quiz.length - 1;
-
-  const handlePrevious = () => {
-    if (startOfQuiz) return;
-    setIndex(index - 1);
-  };
-  const handleNext = () => {
-    if (endOfQuiz) return;
-    setIndex(index + 1);
-  };
-
-  useEffect(() => {
-    const ArrowLeft = "ArrowLeft";
-    const ArrowRight = "ArrowRight";
-    const validKeys = [ArrowLeft, ArrowRight];
-
-    const onKeydown = (event: KeyboardEvent) => {
-      if (!validKeys.includes(event.key)) return;
-
-      if (event.key === "ArrowLeft") {
-        handlePrevious();
-      }
-      if (!endOfQuiz && event.key === "ArrowRight") {
-        handleNext();
-      }
-    };
-
-    document.addEventListener("keydown", onKeydown);
-    return () => {
-      document.removeEventListener("keydown", onKeydown);
-    };
-  });
-
-  const handleAnswer = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const { value: answer } = event.currentTarget;
-    setAnswers((prevState) => ({
-      ...prevState,
-      [index + 1]: parseInt(answer),
-    }));
-  };
-
+const QuizForm: React.FC<FormProps> = ({ quiz }) => {
   return (
     <FormWrapper>
-      <form>
-        <FormGroup>
-          <Label>
-            {index + 1}. {quiz[index].question}
-          </Label>
-          {quiz[index].options.map((choice, index) => {
-            const id = `${quiz[index].name}-${index}`;
-
-            return (
-              <Button
-                type="button"
-                onClick={handleAnswer}
-                key={id}
-                id={id}
-                value={choice.value}
-              >
-                {choice.text}
-              </Button>
-            );
-          })}
-        </FormGroup>
-        <FormControls>
-          {!startOfQuiz ? (
-            <Button type="button" onClick={handlePrevious}>
-              {"<--"}
-            </Button>
-          ) : (
-            <div></div>
-          )}
-          {endOfQuiz && <Button type="submit">Submit</Button>}
-          {!endOfQuiz ? (
-            <Button type="button" onClick={handleNext}>
-              {"-->"}
-            </Button>
-          ) : null}
-        </FormControls>
-      </form>
+      <Formik
+        initialValues={{
+          franchises: "",
+          superheroes: "",
+          actors: "",
+          heroines: "",
+          comedians: "",
+        }}
+        onSubmit={async (values) => {
+          console.log(values);
+        }}
+      >
+        {({ values }) => (
+          <Form>
+            <ol>
+              {movieQuiz.map((question) => (
+                <li>
+                  <p>{question.question}</p>
+                  <FormGroup role="group" aria-labelledby="my-radio-group">
+                    {question.options.map((option) => (
+                      <label>
+                        <Field
+                          type="radio"
+                          name={question.name}
+                          value={option.value}
+                        />
+                        {option.text}
+                      </label>
+                    ))}
+                  </FormGroup>
+                </li>
+              ))}
+            </ol>
+            <Button>Submit</Button>
+          </Form>
+        )}
+      </Formik>
     </FormWrapper>
   );
 };
