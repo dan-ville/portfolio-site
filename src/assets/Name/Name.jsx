@@ -16,7 +16,7 @@ const StyledName = styled.a`
 
 export const Name = () => {
   return (
-    <StyledName as={Link} to="/home">
+    <StyledName as={Link} to="/">
       Daniel Villegas
     </StyledName>
   );
