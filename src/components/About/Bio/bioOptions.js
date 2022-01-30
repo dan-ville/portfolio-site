@@ -11,7 +11,7 @@ const dinnerConvo = `I'm a self-taught web developer and a lifetime Miami local.
       graduating from the University of Miami, I was mostly involved in
       non-profit work until the COVID-19 quarantine, when I started to teach
       myself tech skills. The hype of coding something from scratch that others
-      could see and use drove me to pursue front-end development.My first love
+      could see and use drove me to pursue front-end development. My first love
       is web dev with the React/MERN stack, but I enjoy learning blockchain and
       data science, AI and machine learning, and even a little game development
       and 3D graphics! I'm curently figuring out how to build stuff with

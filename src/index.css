@@ -10,3 +10,6 @@
   box-sizing: border-box;
 }
 
+code {
+  color: hsl(200, 75%, 58%);
+}

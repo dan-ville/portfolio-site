@@ -8,9 +8,10 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Quiz from "./components/Quiz/Quiz";
 import Work from "./components/Work/Work.component";
-import Project from "./components/Project/Project.component";
+import Project from "./components/Work/Project/Project.component";
 import ProjectsList from "./components/Work/ProjectsList/ProjectsList.component";
 import NotFound from "./components/NotFound/NotFound.component";
+import One2Trip from "./components/Work/projects/One2Trip/One2Trip.component"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="work" element={<Work />}>
             <Route index element={<ProjectsList />} />
             <Route path=":projectId" element={<Project />} />
+            <Route path="one2trip" element={<One2Trip />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Route>
@@ -30,7 +32,7 @@ ReactDOM.render(
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
-);
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

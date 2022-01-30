@@ -1,26 +1,24 @@
-import { useState, useContext } from "react";
-import { ThemeContext } from "styled-components";
-import { StyledSub } from "../About.styles";
+import { useState, useContext } from "react"
+import { ThemeContext } from "styled-components"
+import { StyledSub } from "../About.styles"
 import {
   StyledBio,
   StyledForm,
   StyledFormHint,
   StyledLabel,
-} from "./Bio.styles";
-import { BioOptions } from "./bioOptions";
+} from "./Bio.styles"
+import { BioOptions } from "./bioOptions"
 
 const ChooseBioLength = ({ theme, bioOption, setBioOption }) => {
   const handleClick = (e) => {
-    const selected = BioOptions.filter(
-      (option) => option.id === e.target.id
-    )[0];
-    setBioOption(selected);
-  };
+    const selected = BioOptions.filter((option) => option.id === e.target.id)[0]
+    setBioOption(selected)
+  }
 
   const activeOptionStyle = {
     color: `${theme.text.main}`,
     backgroundColor: `${theme.bg.lift}`,
-  };
+  }
 
   return (
     <>
@@ -31,19 +29,19 @@ const ChooseBioLength = ({ theme, bioOption, setBioOption }) => {
             key={x.id}
             id={x.id}
             onClick={(e) => handleClick(e)}
-            style={x.id === bioOption.id ? { ...activeOptionStyle } : null}
+            style={x.id === bioOption.id ? activeOptionStyle : null}
           >
             {x.id}
           </StyledLabel>
         ))}
       </StyledForm>
     </>
-  );
-};
+  )
+}
 
 const Bio = () => {
-  const [bioOption, setBioOption] = useState(BioOptions[0]);
-  const theme = useContext(ThemeContext);
+  const [bioOption, setBioOption] = useState(BioOptions[0])
+  const theme = useContext(ThemeContext)
 
   return (
     <>
@@ -55,7 +53,7 @@ const Bio = () => {
       />
       <StyledBio>{bioOption.value}</StyledBio>
     </>
-  );
-};
+  )
+}
 
-export default Bio;
+export default Bio

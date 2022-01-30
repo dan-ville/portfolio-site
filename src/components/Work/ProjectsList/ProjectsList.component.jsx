@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { StyledTitle } from "../../Layout/Layout";
 import ProjectCard from "../Card/Card.component";
-import projects from "../../../projects/projects";
+import projects from "../projects/projects"
 import { ProjectsWrapper } from "../Work.styles";
 
 const ProjectsList = () => {
