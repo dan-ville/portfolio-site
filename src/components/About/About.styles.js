@@ -19,8 +19,8 @@ export const StyledCardHeader = styled.div`
   border-top-left-radius: 10px;
 
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
 `
 
 export const StyledHeaderIcon = styled.div`
@@ -39,7 +39,33 @@ export const StyledProfilePic = styled.img`
     cursor: pointer;
   }
 `
-
+export const StyledContactInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`
+export const StyledEmail = styled.button`
+  padding: 0.5rem 0.8rem;
+  border: 2px solid ${(props) => props.theme.border};
+  border-radius: 0.3em;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+  }
+  &::before {
+    content: "📋 ";
+  }
+`
+export const StyledLink = styled.a`
+  color: ${(props) => props.theme.text.main};
+  font-weight: 500;
+  text-align: right;
+  padding: 0.5rem 0.8rem;
+  &:hover {
+    cursor: pointer;
+  }
+  text-decoration: none;
+`
 export const StyledTabPane = styled.div`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;

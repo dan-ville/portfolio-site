@@ -11,6 +11,9 @@ import {
   StyledTabWrapper,
   StyledTab,
   StyledActivetab,
+  StyledContactInfo,
+  StyledEmail,
+  StyledLink,
 } from "./About.styles"
 
 import Skills from "./Skills/Skills"
@@ -88,6 +91,16 @@ const About = () => {
           <StyledHeaderIcon>
             <StyledProfilePic alt="me" src={profilePic} />
           </StyledHeaderIcon>
+          <StyledContactInfo>
+            <StyledEmail
+              onClick={() => {
+                navigator.clipboard.writeText("d.villegas@visiontravel.net")
+              }}
+            >
+              d.villegas@visiontravel.net
+            </StyledEmail>
+            <StyledLink href="https://github.com/dan-ville">Github</StyledLink>
+          </StyledContactInfo>
         </StyledCardHeader>
         <TabPane tabList={tabs} components={components} />
       </StyledProfileCard>
