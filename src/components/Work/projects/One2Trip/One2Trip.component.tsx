@@ -13,7 +13,6 @@ const {
   dynamicSearch,
   filteredSearchResults,
   hotelDetail,
-  profileForm,
   roomSelection,
   sumTotal,
 } = one2TripImages
@@ -46,9 +45,9 @@ const One2Trip = () => {
       <FeaturedThumbnail src={profileForm} alt="dynamic search form" /> */}
       <h3>Hotel search</h3>
       <Description>
-        Here is a case study of how I designed a component that lets agents look
-        for hotel and make reservations. React state hooks in functional
-        components allows us to create dynamic form controls, and we use Ant
+        Here is a case study of how I designed a component that lets agents
+        search for hotels and make reservations. React state hooks in functional
+        components allow us to create dynamic form controls, and we use Ant
         Design's React component library to manage form state.
       </Description>
       <FeaturedThumbnail src={dynamicSearch} alt="dynamic search form" />
@@ -63,7 +62,7 @@ const One2Trip = () => {
         filter through the search results by price, rating, lodging type, etc.
         To achieve this, I used a React useState hook in the parent component to
         hold a state object with the corresponding filter properties, and the
-        setState handler is passed to the <code>Filter</code> component. In the{" "}
+        setState handler is passed to a <code>Filter</code> component. In the{" "}
         <code>Filter</code> component, each individual filter component takes a
         handler function that updates the filter object state. Meanwhile, the{" "}
         <code>Listings</code> component evaluates which results to show based on

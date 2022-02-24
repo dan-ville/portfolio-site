@@ -10,6 +10,7 @@ export const Card = styled.div`
   background-color: ${props => props.theme.bg.lift};
 
   display: flex;
+  justify-content: space-between;
 
   &:hover {
     cursor: pointer;
