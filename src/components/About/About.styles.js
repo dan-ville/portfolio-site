@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const StyledProfileCard = styled.div`
   margin: auto;
@@ -7,7 +7,7 @@ export const StyledProfileCard = styled.div`
   overflow: hidden;
   border-radius: 10px;
   background-color: ${(props) => props.theme.bg.lift};
-`;
+`
 
 export const StyledCardHeader = styled.div`
   width: 100%;
@@ -21,7 +21,7 @@ export const StyledCardHeader = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-`;
+`
 
 export const StyledHeaderIcon = styled.div`
   width: 150px;
@@ -29,7 +29,7 @@ export const StyledHeaderIcon = styled.div`
   border-radius: 5px;
   background-color: ${(props) => props.theme.bg.lift};
   overflow: hidden;
-`;
+`
 
 export const StyledProfilePic = styled.img`
   object-fit: cover;
@@ -38,16 +38,16 @@ export const StyledProfilePic = styled.img`
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 export const StyledTabPane = styled.div`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-`;
+`
 
 export const StyledTabWrapper = styled.div`
   display: flex;
-`;
+`
 export const StyledTab = styled.button`
   padding: 0.5em 1em;
   margin-right: 3px;
@@ -62,17 +62,24 @@ export const StyledTab = styled.button`
   &:hover {
     cursor: pointer;
   }
-`;
-
+`
 export const StyledActivetab = styled.div`
   padding: 1.5rem;
 
   color: ${(props) => props.theme.text.negative};
   background-color: ${(props) => props.theme.bg.negative};
-`;
-
+`
 export const StyledSub = styled.h2`
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1.5rem;
-`;
+`
+
+export const StyledHeading = styled.h3`
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin: 1em 0;
+`
+export const StyledItem = styled.p`
+  font-size: 1rem;
+`

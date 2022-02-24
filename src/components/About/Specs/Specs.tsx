@@ -1,12 +1,12 @@
-import { StyledSub } from "../About.styles";
-import { StyledSpec, SpecHeading } from "./Specs.styles";
+import { StyledSub } from "../About.styles"
+import { StyledSpec, SpecHeading } from "./Specs.styles"
 
 const Specs = () => {
   const specs = {
-    Make: "Hispanic",
+    Make: "Colombian-American",
     Model: "Caucasian, Male, 5'6\"",
-    Fuel: "Cold Brew: STōK Un-Sweet, Black",
-  };
+    Fuel: "A nice, medium-rare ribeye",
+  }
 
   return (
     <>
@@ -18,7 +18,7 @@ const Specs = () => {
         </StyledSpec>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default Specs;
+export default Specs
