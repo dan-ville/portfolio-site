@@ -1,5 +1,5 @@
 import { useState, useContext } from "react"
-import { StyledTitle, PageContent } from "../Layout/Layout"
+import { PageContent } from "../Layout/Layout"
 import { ThemeContext } from "styled-components"
 import profilePic from "../../assets/img/profilePic.jpg"
 import {
@@ -13,13 +13,13 @@ import {
   StyledActivetab,
   StyledContactInfo,
   StyledEmail,
-  StyledLink,
 } from "./About.styles"
 
 import Skills from "./Skills/Skills"
 import Specs from "./Specs/Specs"
 import Bio from "./Bio/Bio"
 import mySkills from "./Skills/skills"
+import SocialLinks from "../../assets/UI/SocialLinks"
 
 const components = [<Skills skills={mySkills} />, <Specs />, <Bio />]
 
@@ -85,7 +85,6 @@ const TabPane = ({ tabList, components }: TabPaneProps) => {
 const About = () => {
   return (
     <PageContent>
-      <StyledTitle>About</StyledTitle>
       <StyledProfileCard>
         <StyledCardHeader>
           <StyledHeaderIcon>
@@ -93,13 +92,14 @@ const About = () => {
           </StyledHeaderIcon>
           <StyledContactInfo>
             <StyledEmail
+              type="button"
               onClick={() => {
                 navigator.clipboard.writeText("d.villegas@visiontravel.net")
               }}
             >
               d.villegas@visiontravel.net
             </StyledEmail>
-            <StyledLink href="https://github.com/dan-ville">Github</StyledLink>
+            <SocialLinks />
           </StyledContactInfo>
         </StyledCardHeader>
         <TabPane tabList={tabs} components={components} />

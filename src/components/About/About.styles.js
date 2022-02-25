@@ -14,13 +14,17 @@ export const StyledCardHeader = styled.div`
   height: 33%;
   padding: 30px;
 
-  /* color: ${(props) => props.theme.bg.darkest}; */
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 1rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 
 export const StyledHeaderIcon = styled.div`
@@ -29,6 +33,10 @@ export const StyledHeaderIcon = styled.div`
   border-radius: 5px;
   background-color: ${(props) => props.theme.bg.lift};
   overflow: hidden;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 export const StyledProfilePic = styled.img`
@@ -46,8 +54,11 @@ export const StyledContactInfo = styled.div`
 `
 export const StyledEmail = styled.button`
   padding: 0.5rem 0.8rem;
+  color: ${(props) => props.theme.text.main};
+  background-color: ${(props) => props.theme.bg.lift};
   border: 2px solid ${(props) => props.theme.border};
   border-radius: 0.3em;
+  font-size: ${(props) => props.theme.text.main};
   font-weight: 500;
   &:hover {
     cursor: pointer;
@@ -56,16 +67,7 @@ export const StyledEmail = styled.button`
     content: "📋 ";
   }
 `
-export const StyledLink = styled.a`
-  color: ${(props) => props.theme.text.main};
-  font-weight: 500;
-  text-align: right;
-  padding: 0.5rem 0.8rem;
-  &:hover {
-    cursor: pointer;
-  }
-  text-decoration: none;
-`
+
 export const StyledTabPane = styled.div`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -73,6 +75,8 @@ export const StyledTabPane = styled.div`
 
 export const StyledTabWrapper = styled.div`
   display: flex;
+
+  overflow-x: scroll;
 `
 export const StyledTab = styled.button`
   padding: 0.5em 1em;
@@ -85,8 +89,12 @@ export const StyledTab = styled.button`
 
   border-top-left-radius: 10px;
   border-top-right-radius: 20px;
+
   &:hover {
     cursor: pointer;
+  }
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
   }
 `
 export const StyledActivetab = styled.div`

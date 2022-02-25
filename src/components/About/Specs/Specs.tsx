@@ -1,4 +1,3 @@
-import { StyledSub } from "../About.styles"
 import { StyledSpec, SpecHeading } from "./Specs.styles"
 
 const Specs = () => {
@@ -10,7 +9,6 @@ const Specs = () => {
 
   return (
     <>
-      <StyledSub>Specs</StyledSub>
       {Object.entries(specs).map((spec) => (
         <StyledSpec key={spec[0]}>
           <SpecHeading>{spec[0].toUpperCase()}</SpecHeading>
