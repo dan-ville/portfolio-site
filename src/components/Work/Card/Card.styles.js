@@ -8,7 +8,7 @@ export const Card = styled.div`
   border-radius: 0.3em;
   overflow: hidden;
   background-color: ${props => props.theme.bg.lift};
-
+  min-height: 180px;
   display: flex;
   justify-content: space-between;
 
@@ -22,6 +22,9 @@ export const Card = styled.div`
 `;
 export const CardText = styled.div`
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 export const ProjectTitle = styled.h2`
   font-size: 2rem;
