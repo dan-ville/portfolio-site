@@ -46,7 +46,7 @@ const projectsDB: Project[] = [
     heading: "Your idea",
     description: `Have an idea for a web app or website? Let's make it happen.`,
     src: testImgY,
-    url: "https://dan-ville.github.io/karis-tours/",
+    url: "/contact",
   },
 ]
 
