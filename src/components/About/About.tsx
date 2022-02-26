@@ -12,7 +12,6 @@ import {
   StyledTab,
   StyledActivetab,
   StyledContactInfo,
-  StyledEmail,
 } from "./About.styles"
 
 import Skills from "./Skills/Skills"
@@ -20,6 +19,9 @@ import Specs from "./Specs/Specs"
 import Bio from "./Bio/Bio"
 import mySkills from "./Skills/skills"
 import SocialLinks from "../../assets/UI/SocialLinks"
+import StyledLink from "../../assets/UI/Link"
+import { NavLinkStyled } from "../Header/Header.styles"
+import { Link } from "react-router-dom"
 
 const components = [<Skills skills={mySkills} />, <Specs />, <Bio />]
 
@@ -91,14 +93,8 @@ const About = () => {
             <StyledProfilePic alt="me" src={profilePic} />
           </StyledHeaderIcon>
           <StyledContactInfo>
-            <StyledEmail
-              type="button"
-              onClick={() => {
-                navigator.clipboard.writeText("d.villegas@visiontravel.net")
-              }}
-            >
-              d.villegas@visiontravel.net
-            </StyledEmail>
+            <StyledLink size="small" text="d.villegas@visiontravel.net" />
+            <StyledLink size="small" text="+1-786-483-5337" />
             <SocialLinks />
           </StyledContactInfo>
         </StyledCardHeader>
