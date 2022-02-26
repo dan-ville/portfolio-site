@@ -75,8 +75,9 @@ export const StyledTabPane = styled.div`
 
 export const StyledTabWrapper = styled.div`
   display: flex;
-
-  overflow-x: scroll;
+  @media (max-width: 600px) {
+    overflow-x: scroll;
+  }
 `
 export const StyledTab = styled.button`
   padding: 0.5em 1em;
