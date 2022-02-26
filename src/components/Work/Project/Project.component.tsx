@@ -48,7 +48,9 @@ const Project: React.FC = () => {
         </p>
       </Header>
       <Description>{description}</Description>
-      <small>*Click the image to visit the project page.</small>
+      {parseFloat(projectId) === projects.length - 1 ? (
+        <small>*Click the image to visit the project page.</small>
+      ) : null}
       <a href={url}>
         <FeaturedThumbnail src={src} alt="preview of project" />
       </a>
