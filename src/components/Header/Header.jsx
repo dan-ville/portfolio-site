@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { Name } from "../../assets/Name/Name";
+import { Link } from "react-router-dom"
+import { Name } from "../../assets/Name/Name"
 import {
   HeaderStyled,
   HeaderWrapperStyled,
   NavStyled,
   NavLinkStyled,
-} from "./Header.styles";
+} from "./Header.styles"
 
 const Header = () => {
   return (
@@ -16,16 +16,16 @@ const Header = () => {
           <NavLinkStyled as={Link} to="/Work">
             Work
           </NavLinkStyled>
-          {/* <NavLinkStyled as={Link} to="/Blog">
-            Blog
-          </NavLinkStyled> */}
+          <NavLinkStyled as={Link} to="/Contact">
+            Contact
+          </NavLinkStyled>
           <NavLinkStyled as={Link} to="/About">
             About
           </NavLinkStyled>
         </NavStyled>
       </HeaderWrapperStyled>
     </HeaderStyled>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

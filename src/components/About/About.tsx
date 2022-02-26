@@ -20,8 +20,6 @@ import Bio from "./Bio/Bio"
 import mySkills from "./Skills/skills"
 import SocialLinks from "../../assets/UI/SocialLinks"
 import StyledLink from "../../assets/UI/Link"
-import { NavLinkStyled } from "../Header/Header.styles"
-import { Link } from "react-router-dom"
 
 const components = [<Skills skills={mySkills} />, <Specs />, <Bio />]
 
