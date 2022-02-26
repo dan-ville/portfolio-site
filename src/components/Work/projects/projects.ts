@@ -1,13 +1,12 @@
-import testImgY from "../../../assets/img/testImgY.jpg"
 import karis from "../../../assets/img/karis.png"
 import b2b from "../../../assets/img/b2b.png"
 import anagrammer from "../../../assets/img/anagrammer.png"
 
 interface Project {
-  heading: string
-  description: string
-  src: string
-  url: string
+  heading?: string
+  description?: string
+  src?: string
+  url?: string
   index?: number
 }
 
@@ -41,12 +40,6 @@ const projectsDB: Project[] = [
     description: `If you need lots of anagrams for a word... look no further.`,
     src: anagrammer,
     url: "https://dan-ville.github.io/anagrammer/",
-  },
-  {
-    heading: "Your idea",
-    description: `Have an idea for a web app or website? Let's make it happen.`,
-    src: testImgY,
-    url: "/contact",
   },
 ]
 

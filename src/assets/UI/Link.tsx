@@ -11,6 +11,7 @@ const StyledLink = styled.p<LinkProps>`
   background-color: ${(props) => props.theme.bg.lift};
   border: 2px solid ${(props) => props.theme.border};
   width: 100%;
+  max-width: 300px;
   border-radius: 0.3em;
   text-align: center;
   font-size: ${(props) => (props.size === "large" ? "1rem" : "0.7rem")};

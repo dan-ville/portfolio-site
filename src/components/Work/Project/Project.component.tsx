@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 import Button from "../../../assets/UI/Button"
+import { PageWidth } from "../../Layout/Layout"
 import projects from "../projects/projects"
 
 import {
@@ -35,7 +36,7 @@ const Project: React.FC = () => {
   }
 
   return (
-    <>
+    <PageWidth>
       <Controls>
         <Button onClick={goToPrevious}>Previous</Button>
         <Button onClick={goToAll}>All Projects</Button>
@@ -48,13 +49,11 @@ const Project: React.FC = () => {
         </p>
       </Header>
       <Description>{description}</Description>
-      {parseFloat(projectId) === projects.length - 1 ? (
-        <small>*Click the image to visit the project page.</small>
-      ) : null}
+      <small>*Click the image to visit the project page.</small>
       <a href={url}>
         <FeaturedThumbnail src={src} alt="preview of project" />
       </a>
-    </>
+    </PageWidth>
   )
 }
 

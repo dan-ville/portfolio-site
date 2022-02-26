@@ -11,6 +11,7 @@ export const AppWrapper = styled.div`
 export const PageWidth = styled.div`
   max-width: 1000px;
   margin: 0 auto;
+  width: 100%;
 `;
 export const PageContent = styled.div`
   padding: 1rem;
@@ -19,6 +20,9 @@ export const Section = styled.section`
   padding: 2.5rem;
   background-color: ${props => props.theme.bg.base};
 `;
+export const FlexRow = styled.div`
+  display: flex;
+`
 export const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
