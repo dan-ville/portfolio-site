@@ -1,6 +1,5 @@
 import { useState, useContext } from "react"
 import { ThemeContext } from "styled-components"
-import { StyledSub } from "../About.styles"
 import {
   StyledBio,
   StyledForm,
@@ -45,7 +44,6 @@ const Bio = () => {
 
   return (
     <>
-      <StyledSub>Bio</StyledSub>
       <ChooseBioLength
         theme={theme}
         bioOption={bioOption}
