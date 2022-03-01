@@ -2,7 +2,7 @@ export type ThemeType = typeof theme
 
 export const theme = {
   bg: {
-    base: "hsl(200, 30%, 5%)",
+    base: "hsl(200, 30%, 10%)",
     lift: "hsl(200, 20%, 20%)",
     negative: "hsl(200, 20%, 90%)",
   },
