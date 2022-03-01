@@ -1,7 +1,7 @@
 import { useState, useContext } from "react"
 import { PageContent } from "../Layout/Layout"
 import { ThemeContext } from "styled-components"
-import profilePic from "../../assets/img/profilePic.jpg"
+import profilePic from "../../assets/img/ProfileB&W.jpg"
 import {
   StyledProfileCard,
   StyledCardHeader,
