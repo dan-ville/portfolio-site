@@ -1,9 +1,11 @@
-import React from "react";
-import { StyledTitle } from "../Layout/Layout";
-import { movieQuiz, QuizFieldInterface } from "./questions";
-import { QuizWrapper, FormWrapper, QuizTip, FormGroup } from "./Quiz.styles";
-import { Formik, Field, Form } from "formik";
-import Button from "../../assets/UI/Button";
+import React from "react"
+import { StyledTitle } from "../Layout/Layout"
+import { movieQuiz, QuizFieldInterface } from "./questions"
+import { QuizWrapper, FormWrapper, QuizTip, FormGroup } from "./Quiz.styles"
+import { Formik, Field, Form } from "formik"
+import Button from "../../assets/UI/Button"
+
+// ! THIS COMPONENT IS NOT YET IMPLEMENTED
 
 export default function Quiz() {
   // TODO: make wizard component
@@ -15,12 +17,12 @@ export default function Quiz() {
         Tip: use {"<--/-->"} keys to navigate, and <code>Enter</code> to submit.
       </QuizTip>
     </QuizWrapper>
-  );
+  )
 }
 
 type FormProps = {
-  quiz: QuizFieldInterface[];
-};
+  quiz: QuizFieldInterface[]
+}
 const QuizForm: React.FC<FormProps> = ({ quiz }) => {
   return (
     <FormWrapper>
@@ -33,7 +35,7 @@ const QuizForm: React.FC<FormProps> = ({ quiz }) => {
           comedians: "",
         }}
         onSubmit={async (values) => {
-          console.log(values);
+          console.log(values)
         }}
       >
         {({ values }) => (
@@ -62,5 +64,5 @@ const QuizForm: React.FC<FormProps> = ({ quiz }) => {
         )}
       </Formik>
     </FormWrapper>
-  );
-};
+  )
+}
