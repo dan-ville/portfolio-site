@@ -2,9 +2,9 @@ import styled from "styled-components"
 
 export const HeaderStyled = styled.div`
   padding: 1rem;
-  background: ${(props) => props.theme.bg.darker};
+  background: ${(props) => props.theme.bg.base};
   color: ${(props) => props.theme.text.main};
-  border-bottom: 1px solid ${(props) => props.theme.bg.light};
+  border-bottom: 1px solid ${(props) => props.theme.bg.lift};
 `
 export const HeaderWrapperStyled = styled.div`
   margin: 0 auto;

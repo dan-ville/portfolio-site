@@ -1,15 +1,21 @@
-import { useContext } from "react";
-import { ThemeContext } from "styled-components";
+import { useContext } from "react"
+import { ThemeContext } from "styled-components"
 
-const sizes = {
+type TSizeOptions = {
+  [key: string]: number
+}
+const sizes: TSizeOptions = {
   xs: 50,
   sm: 150,
   md: 250,
   lg: 400,
-};
+}
 
-const Mack = ({ size }) => {
-  const theme = useContext(ThemeContext);
+type MackProps = {
+  size?: string
+}
+const Mack = ({ size = "md" }: MackProps) => {
+  const theme = useContext(ThemeContext)
 
   return (
     <svg
@@ -88,7 +94,7 @@ const Mack = ({ size }) => {
         </filter>
       </defs>
     </svg>
-  );
-};
+  )
+}
 
-export default Mack;
+export default Mack

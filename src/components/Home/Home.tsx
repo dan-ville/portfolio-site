@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Mack from "../../assets/SVG/Mack";
 import { PageWidth, Section, StyledTitle } from "../Layout/Layout";
+import Mack from '../../assets/SVG/Mack'
 import {
   StyledIntro,
   StyledPitch,
