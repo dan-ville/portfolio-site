@@ -8,6 +8,8 @@ interface Project {
   src?: string
   url?: string
   index?: number
+  github?: string
+  closedSource?: boolean
 }
 
 const projectsDB: Project[] = [
@@ -16,12 +18,14 @@ const projectsDB: Project[] = [
     description: `A multi-service application built for Vision Travel to give their salespeople a one-stop-shop app for making final sales in tourism.`,
     src: b2b,
     url: "/work/one2trip",
+    closedSource: true,
   },
   {
     heading: "Karis Tours",
     description: `A landing page for a fake company, Karis Tours, which offers tours in various cities of Portugal.`,
     src: karis,
     url: "https://dan-ville.github.io/karis-tours/",
+    github: "https://github.com/dan-ville/karis-tours",
   },
   // {
   //   heading: "The Vale",
@@ -40,6 +44,7 @@ const projectsDB: Project[] = [
     description: `If you need lots of anagrams for a word... look no further.`,
     src: anagrammer,
     url: "https://dan-ville.github.io/anagrammer/",
+    github: "https://github.com/dan-ville/anagrammer",
   },
 ]
 

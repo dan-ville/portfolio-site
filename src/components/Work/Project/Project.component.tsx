@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom"
+import GithubIcon from "../../../assets/SVG/Github"
 import Button from "../../../assets/UI/Button"
 import { PageWidth } from "../../Layout/Layout"
 import projects from "../projects/projects"
@@ -9,6 +10,7 @@ import {
   Header,
   Description,
   Controls,
+  GithubAnchor,
 } from "./Project.styles"
 
 type ProjectParams = {
@@ -21,7 +23,7 @@ const Project: React.FC = () => {
   if (!projectId) return null
 
   const project = projects[parseInt(projectId) - 1]
-  const { heading, src, description, url } = project
+  const { heading, src, description, url, github, closedSource } = project
 
   const goToPrevious = () => {
     if (parseFloat(projectId) === 1) return
@@ -48,6 +50,15 @@ const Project: React.FC = () => {
           {projectId}/{projects.length}
         </p>
       </Header>
+      {closedSource ? (
+        <em>**This project is closed source.</em>
+      ) : (
+        <p>
+          <GithubAnchor href={github}>
+            <GithubIcon fill="white" width="15" height="15" /> Visit Github repo
+          </GithubAnchor>
+        </p>
+      )}
       <Description>{description}</Description>
       <small>*Click the image to visit the project page.</small>
       <a href={url}>
