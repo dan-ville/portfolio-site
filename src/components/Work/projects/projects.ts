@@ -1,6 +1,7 @@
 import karis from "../../../assets/img/karis.png"
 import b2b from "../../../assets/img/b2b.png"
 import anagrammer from "../../../assets/img/anagrammer.png"
+import bndsrvnt from "../../../assets/img/bndsrvnt.jpg"
 
 interface Project {
   heading?: string
@@ -27,24 +28,19 @@ const projectsDB: Project[] = [
     url: "https://dan-ville.github.io/karis-tours/",
     github: "https://github.com/dan-ville/karis-tours",
   },
-  // {
-  //   heading: "The Vale",
-  //   description: `Explore the epic fantasy universe of The Vale, download  a free preview of the book, and get to know the characters.`,
-  //   src: testImgX,
-  //   url: "https://dan-ville.github.io/karis-tours/",
-  // },
-  // {
-  //   heading: "Trello Clone",
-  //   description: `A guided project, courtesy of Maksim Ivanov and Alex Bespoyasov's Fullstack React with Typescript.`,
-  //   src: testImgY,
-  //   url: "https://dan-ville.github.io/karis-tours/",
-  // },
   {
     heading: "Anagrammer",
     description: `If you need lots of anagrams for a word... look no further.`,
     src: anagrammer,
     url: "https://dan-ville.github.io/anagrammer/",
     github: "https://github.com/dan-ville/anagrammer",
+  },
+  {
+    heading: "BNDSRVNT",
+    description: "A landing page for BNDSRVNT music.",
+    src: bndsrvnt,
+    url: "https://bndsrvnt.co/",
+    github: "https://github.com/dan-ville/bndsrvnt",
   },
 ]
 
