@@ -22,18 +22,11 @@ const projectsDB: Project[] = [
     closedSource: true,
   },
   {
-    heading: "Karis Tours",
-    description: `A landing page for a fake company, Karis Tours, which offers tours in various cities of Portugal.`,
-    src: karis,
-    url: "https://dan-ville.github.io/karis-tours/",
-    github: "https://github.com/dan-ville/karis-tours",
-  },
-  {
     heading: "Anagrammer",
     description: `If you need lots of anagrams for a word... look no further.`,
     src: anagrammer,
-    url: "https://dan-ville.github.io/anagrammer/",
-    github: "https://github.com/dan-ville/anagrammer",
+    url: "https://my-anagram.com/",
+    github: "https://github.com/dan-ville/anagrammer-v2",
   },
   {
     heading: "BNDSRVNT",
@@ -41,6 +34,13 @@ const projectsDB: Project[] = [
     src: bndsrvnt,
     url: "https://bndsrvnt.co/",
     github: "https://github.com/dan-ville/bndsrvnt",
+  },
+  {
+    heading: "Karis Tours",
+    description: `A landing page for a fake company, Karis Tours, which offers tours in various cities of Portugal.`,
+    src: karis,
+    url: "https://dan-ville.github.io/karis-tours/",
+    github: "https://github.com/dan-ville/karis-tours",
   },
 ]
 
